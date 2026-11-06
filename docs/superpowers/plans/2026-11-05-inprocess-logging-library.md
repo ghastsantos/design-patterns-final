@@ -13,9 +13,9 @@
 ## Global Constraints
 
 - Use Java 21.
-- Keep runtime dependencies at zero.
+- Keep production dependencies at zero; use JUnit only for tests.
 - Keep the demo dependent only on the public `library` module API.
-- Do not add or execute tests in this task.
+- Add JUnit tests for the public behavior of the library.
 - Include user-facing documentation in Brazilian Portuguese; keep code identifiers in English.
 
 ## Review Focus
@@ -42,7 +42,7 @@
 - Produces: Gradle projects `:library` and `:demo`; `:demo` declares `implementation(project(":library"))`.
 
 - [x] Configure root project name `design-patterns-final`, group `br.pucpr`, version `1.0.0`, UTF-8 compilation, and Java 21 toolchains.
-- [x] Configure `library` with the `java-library` plugin and no dependencies.
+- [x] Configure `library` with the `java-library` plugin and no production dependencies.
 - [x] Configure `demo` with `application`, main class `br.pucpr.demo.DemoApplication`, and dependency on `:library`.
 - [x] Add a minimal `.gitignore` for Gradle and IDE outputs.
 
@@ -87,7 +87,7 @@
 - [x] Document prerequisites, Windows commands, local Gradle dependency, API example, levels, extension steps, and Strategy/Observer explanations in Portuguese.
 - [x] Provide a video outline capped at 10 minutes with slots for student name and YouTube URL, and prompts to explain two patterns with code locations and context.
 
-### Task 4: Verify delivery without test suites
+### Task 4: Verify demo and distributable
 
 **Files:**
 - No new files.
@@ -95,3 +95,18 @@
 - [x] Run `.\gradlew.bat :demo:run` and confirm the demo shows filtered output, JSON, file output, and telemetry output.
 - [x] Run `.\gradlew.bat :library:jar` and confirm the distributable JAR is created under `library/build/libs/`.
 - [x] Review README and video outline against every assignment delivery requirement; report anything blocked by external accounts (hosting the repo/video).
+
+### Task 5: Cover public library behavior with automated tests
+
+**Files:**
+- Modify: `library/build.gradle.kts`
+- Create: `library/src/test/java/br/pucpr/logkit/LogLevelTest.java`
+- Create: `library/src/test/java/br/pucpr/logkit/LoggerBuilderTest.java`
+- Create: `library/src/test/java/br/pucpr/logkit/LoggerTest.java`
+- Create: `library/src/test/java/br/pucpr/logkit/JsonLineFormatterTest.java`
+- Create: `library/src/test/java/br/pucpr/logkit/PlainTextFormatterTest.java`
+- Create: `library/src/test/java/br/pucpr/logkit/FileSinkTest.java`
+- Modify: `README.md`
+
+- [x] Cover level ordering, builder validation, threshold filtering, one formatting call per accepted event, observer delivery despite one sink failure, idempotent closure, exact text and escaped JSON output, and file append behavior.
+- [x] Run `./gradlew :library:test` and `./gradlew build`; confirm all tests pass and both modules build.

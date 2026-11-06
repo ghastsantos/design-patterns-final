@@ -10,6 +10,7 @@ Ela oferece níveis de log, filtro por nível mínimo, formatação legível ou 
 ## Requisitos
 
 - JDK 21;
+- JUnit 6 para executar a suíte de testes;
 - Windows PowerShell ou um terminal compatível com Gradle.
 
 ## Executar o exemplo
@@ -34,6 +35,12 @@ O arquivo JAR será gerado em `library/build/libs/`. O módulo cliente do mesmo 
 dependencies {
     implementation(files("libs/library-1.0.0.jar"))
 }
+```
+
+Para executar os testes automatizados da biblioteca:
+
+```powershell
+.\gradlew.bat :library:test
 ```
 
 ## Exemplo de uso
