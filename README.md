@@ -1,7 +1,7 @@
 # LogKit - biblioteca de logging para Java
 
 **Aluno:** Gastão Eduardo Santos Borges<br>
-**Vídeo de apresentação:** Pendente de gravação e publicação no YouTube.
+**Vídeo de apresentação:** [Assistir no YouTube](https://youtu.be/vB9ykD_H2BQ)
 
 LogKit é uma biblioteca Java para registrar eventos dentro do processo da aplicação. O projeto contém a biblioteca em `library/` e um cliente independente em `demo/`, que importa a biblioteca como uma dependência Gradle.
 

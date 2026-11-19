@@ -1,7 +1,7 @@
 # Roteiro de gravação - LogKit
 
 **Apresentador:** Gastão Eduardo Santos Borges<br>
-**Link do vídeo não listado:** [preencher depois de publicar]
+**Link do vídeo não listado:** https://youtu.be/vB9ykD_H2BQ
 
 Roteiro individual para aproximadamente 8 minutos, com margem para pausas e troca de telas. O limite da atividade é 10 minutos. Os trechos entre colchetes são instruções de tela; as falas podem ser lidas como estão ou adaptadas.
 
@@ -77,5 +77,5 @@ Roteiro individual para aproximadamente 8 minutos, com margem para pausas e troc
 - [ ] Gravar a tela e conferir duração menor que 10 minutos.
 - [ ] Mostrar a execução do cliente e o arquivo `output/application.log`.
 - [ ] Mostrar os trechos citados de Strategy e Observer e explicar o problema que cada um resolve.
-- [ ] Publicar o vídeo no YouTube como não listado e colar o link no README.
+- [x] Publicar o vídeo no YouTube como não listado e colar o link no README.
 - [ ] Entregar na plataforma apenas o link do repositório.
